@@ -23,12 +23,12 @@
         {% for voiture in voitures %}
             <article>
                 <div class="mini-car-title">
-                    <a href="car.html">
+                    <a href="{{ path('app_voiture_detail', {id: voiture.id}) }}">
                         <h3>{{ voiture.nom }}</h3>
                         <p>ou similaire | Saint-Étienne</p>
                     </a>
                     <div>
-                        <a href="#"><img src="{{ asset('icons/trash.png') }}" alt="Supprimer" /></a>
+                        <a href="{{ path('app_voiture_remove', {id: voiture.id}) }}"><img src="{{ asset('icons/trash.png') }}" alt="Supprimer" /></a>
                     </div>
                 </div>
                 <div class="mini-car-icons">
